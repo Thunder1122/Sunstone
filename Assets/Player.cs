@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public int MaxShield = 25;
 
     // Track player mana
-    Dictionary<int, int> PlayerResources;
+    public Dictionary<int, int> PlayerResources;
 
     // UI sliders to track health, shield
     public Slider HealthSlider;
