@@ -4,23 +4,41 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    public int CardDamage;
+    // Track players
     public Player CurrentPlayer;
     public Player OtherPlayer;
-    public GameObject Payload;          //will store a misc game object with a specific script tied to it. this lets us run custom actions and keep a singular card class.
+
+    // Damage (positive number) which is a placeholder for misc effects
+    public int CardDamage;
+
+    // Mana costs to use this card
     public int[] ManaCosts;
 
+    // Maybe we'll use this later
+    // Stores a GameObject with a script tied to it, letting us run custom
+    // actions without making multiple card classes
+    public GameObject Payload;
 
+    /// <summary>
+    /// Initialize card damage and costs
+    /// </summary>
     internal void Start()
     {
+        // Demo card damage
         CardDamage = Random.Range(0, 20);
+
+        // Demo mana costs
         ManaCosts = new int[6] { 1, 1, 1, 1, 0, 0 };
+
+        // Set players (this needs to be fixed later)
         CurrentPlayer = GameObject.Find("Player1").GetComponent<Player>();
         OtherPlayer = GameObject.Find("Player2").GetComponent<Player>();
     }
 
+    /// <summary>
+    /// Choose card, if appropriate
+    /// </summary>
     internal void OnMouseDown() {
-        // Check mana for card, do action if appropriate
         // Check mana
         for (int i = 0; i < 6; i++) {
             // Break if not enough mana
@@ -34,7 +52,6 @@ public class Card : MonoBehaviour
             CurrentPlayer.PlayerResources[i] -= ManaCosts[i];
         }
 
-
         // Attack -- placeholder card deals random damage from 0 to 20
         if (OtherPlayer.PlayerResources[5] < CardDamage) {
             OtherPlayer.PlayerResources[5] = 0;
@@ -42,6 +59,7 @@ public class Card : MonoBehaviour
             OtherPlayer.PlayerResources[5] -= CardDamage;
         }
 
+        // Modify display of other player health
         OtherPlayer.HealthSlider.value -= CardDamage;
         OtherPlayer.HealthText.text = OtherPlayer.HealthSlider.value.ToString();
 
@@ -49,6 +67,6 @@ public class Card : MonoBehaviour
 
     internal void Update()
     {
-
+        // Uh, nothing.
     }
 }
