@@ -25,7 +25,7 @@ public class Card : MonoBehaviour
     internal void Start()
     {
         // Demo card damage
-        CardDamage = Random.Range(0, 20);
+        CardDamage = Random.Range(10, 40);
 
         // Demo mana costs
         ManaCosts = new int[6] { 1, 1, 1, 1, 0, 0 };
