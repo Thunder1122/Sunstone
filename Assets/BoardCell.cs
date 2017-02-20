@@ -1,16 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class BoardCell : MonoBehaviour {
 
+    // Number of sprites; alternatively, offset between selected and unselected indices for same sprite
     public static readonly int OFFSET = 7;
+
+    // Position and sprite index (doubles as mana type) of cell
     public int ROWINDEX;
     public int COLUMNINDEX;
     public int SpriteIndex;
-    public int ManaType = 6;        //init with empty mana type just in case
+
+    // Whether the cell has been matched
     public bool Matched = false;
 
+    /// <summary>
+    /// Marks a cell as "selected"
+    /// </summary>
+    /// <param name="cell">cell to select</param>
     public void Select(BoardCell cell) {
         BoardManager board = transform.parent.GetComponent<BoardManager>();
         cell.SpriteIndex += OFFSET;
@@ -18,6 +26,10 @@ public class BoardCell : MonoBehaviour {
         board.SelectedColumn = cell.COLUMNINDEX;
     }
 
+    /// <summary>
+    /// Marks a cell as "deselected"
+    /// </summary>
+    /// <param name="cell">cell to deselect</param>
     public void Deselect(BoardCell cell) {
         BoardManager board = transform.parent.GetComponent<BoardManager>();
         cell.SpriteIndex -= OFFSET;
@@ -25,6 +37,9 @@ public class BoardCell : MonoBehaviour {
         board.SelectedColumn = -1;
     }
 
+    /// <summary>
+    /// Select, deselect, and swap cells
+    /// </summary>
     public void OnMouseDown() {
         // Get coordinates of currently selected cell
         BoardManager board = transform.parent.GetComponent<BoardManager>();
@@ -51,20 +66,15 @@ public class BoardCell : MonoBehaviour {
         }
     }
 
-    void SetManaType(int type)
-    {
-        if (type > 6) { type -= 7; }        //don't care for selected sprite variant
-        ManaType = type;
-    }
-
+    /// <summary>
+    /// Draw sprite based on SpriteIndex
+    /// </summary>
     internal void DrawSprite() {
         BoardManager board = transform.parent.GetComponent<BoardManager>();
         GetComponent<SpriteRenderer>().sprite = board.sprites[SpriteIndex];
-        SetManaType(SpriteIndex);
         return;
     }
 
-    // Update is called once per frame
     internal void Update() {
         DrawSprite();
     }
