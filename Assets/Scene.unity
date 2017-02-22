@@ -7336,6 +7336,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  PlayerID: 0
   StartingShield: 0
   MaxShield: 25
   StartingHealth: 100
@@ -7481,6 +7482,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  PlayerID: 1
   StartingShield: 0
   MaxShield: 25
   StartingHealth: 100

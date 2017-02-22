@@ -22,7 +22,7 @@ public class Card : MonoBehaviour
 
     // GUI Label vars, used to display card stats on screen.
     private GUIStyle GuiStyle = new GUIStyle();
-    Rect LabelRect = new Rect(100, 100, 200, 80);
+    public Rect LabelRect;
     public bool ShowValue;
     StringBuilder sb = new StringBuilder();
     string[] ManaTypes = { "Air: ", "Earth: ", "Fire: ", "Water: " };
@@ -37,40 +37,50 @@ public class Card : MonoBehaviour
         CardDamage = Random.Range(10, 40);
 
         // Demo mana costs
-        ManaCosts = new int[6] { Random.Range(0,3), Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3), 0, 0 };
+        ManaCosts = new int[6] { Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3), 0, 0 };
 
-        // Set players (this needs to be fixed later)
-        CurrentPlayer = GameObject.Find("Player1").GetComponent<Player>();
-        OtherPlayer = GameObject.Find("Player2").GetComponent<Player>();
+        // Set players
+        CurrentPlayer = transform.parent.parent.GetComponent<Player>();
+        OtherPlayer = GameObject.Find(transform.parent.parent.GetComponent<Player>().PlayerID == 0 ? "Player2" : "Player1").GetComponent<Player>();
 
         // Set GUI Style params
         GuiStyle.fontSize = 20;
 
         // Generate the tooltip string for this card.
         LabelString = LabelMaker();
+
+        // Calculate the offset for card stats display
+        LabelRect = new Rect(100 + (1400 * CurrentPlayer.PlayerID), 100, 40, 80);
     }
 
     /// <summary>
     /// Choose card, if appropriate
     /// </summary>
-    internal void OnMouseDown() {
+    internal void OnMouseDown()
+    {
         // Check mana
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 6; i++)
+        {
             // Break if not enough mana
-            if (CurrentPlayer.PlayerResources[i] < ManaCosts[i]) {
+            if (CurrentPlayer.PlayerResources[i] < ManaCosts[i])
+            {
                 return;
             }
         }
 
         // Spend mana
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 6; i++)
+        {
             CurrentPlayer.PlayerResources[i] -= ManaCosts[i];
         }
 
         // Attack -- placeholder card deals random damage from 0 to 20
-        if (OtherPlayer.PlayerResources[5] < CardDamage) {
+        if (OtherPlayer.PlayerResources[5] < CardDamage)
+        {
             OtherPlayer.PlayerResources[5] = 0;
-        } else {
+        }
+        else
+        {
             OtherPlayer.PlayerResources[5] -= CardDamage;
         }
 
@@ -103,7 +113,7 @@ public class Card : MonoBehaviour
         sb.Append("\n\n");
         for (int i = 0; i < 5; i++)
         {
-            if(ManaCosts[i] != 0)
+            if (ManaCosts[i] != 0)
             {
                 sb.Append(ManaTypes[i]);
                 sb.Append(ManaCosts[i]);
