@@ -40,8 +40,11 @@ public class Card : MonoBehaviour
         ManaCosts = new int[6] { Random.Range(0,3), Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3), 0, 0 };
 
         // Set players (this needs to be fixed later)
-        CurrentPlayer = GameObject.Find("Player1").GetComponent<Player>();
-        OtherPlayer = GameObject.Find("Player2").GetComponent<Player>();
+        //CurrentPlayer = GameObject.Find("Player1").GetComponent<Player>();
+        //OtherPlayer = GameObject.Find("Player2").GetComponent<Player>();
+        CurrentPlayer = transform.parent.parent.GetComponent<Player>();
+        Debug.Log(CurrentPlayer);
+        OtherPlayer = GameObject.Find(transform.parent.parent.GetComponent<Player>().PlayerID == 0 ? "Player2" : "Player1").GetComponent<Player>();
 
         // Set GUI Style params
         GuiStyle.fontSize = 20;

@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     // Internal card storage
     public GameObject[] CardArray = new GameObject[10];
 
+    // Internal Player Identifier (set from Unity inspector)
+    // "Player1" is 0, "Player2" is 1
+    public int PlayerID;
+
     // Parameterize shield and health
     public int StartingShield = 0;
     public int MaxShield = 25;
