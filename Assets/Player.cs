@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         // Initialize 0 - 3 (air, earth, fire, water) to 0, shield and health as
         // appropriate
         PlayerResources = new Dictionary<int, int> {
-            {0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, StartingShield}, {5, StartingHealth}
+            {0, 5}, {1, 5}, {2, 5}, {3, 5}, {4, StartingShield}, {5, StartingHealth}
         };
 
         UpdatePlayerUI();
