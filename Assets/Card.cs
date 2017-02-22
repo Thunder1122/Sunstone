@@ -26,6 +26,7 @@ public class Card : MonoBehaviour
     public bool ShowValue;
     StringBuilder sb = new StringBuilder();
     string[] ManaTypes = { "Air: ", "Earth: ", "Fire: ", "Water: " };
+    string LabelString;
 
     /// <summary>
     /// Initialize card damage and costs
@@ -44,6 +45,9 @@ public class Card : MonoBehaviour
 
         // Set GUI Style params
         GuiStyle.fontSize = 20;
+
+        // Generate the tooltip string for this card.
+        LabelString = LabelMaker();
     }
 
     /// <summary>
@@ -106,6 +110,7 @@ public class Card : MonoBehaviour
                 sb.Append('\n');
             }
         }
+        Debug.Log("String Generated");
         return sb.ToString();
     }
 
@@ -113,7 +118,7 @@ public class Card : MonoBehaviour
     {
         if (ShowValue)
         {
-            GUI.Label(LabelRect, LabelMaker(), GuiStyle);
+            GUI.Label(LabelRect, LabelString, GuiStyle);
         }
     }
 }
