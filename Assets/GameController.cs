@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour {
     }
 
     public void MakeButtonStart() {
-        ButtonText.text = "Start Turn";
+        ButtonText.text = "Start Matching";
         TurnButton.GetComponent<Image>().color = Color.green;
     }
 
