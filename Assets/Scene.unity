@@ -4326,7 +4326,6 @@ MonoBehaviour:
   ManaCosts: 
   Payload: {fileID: 0}
   ShowValue: 0
-  Label: 
 --- !u!61 &660398452
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8312,7 +8311,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start Turn
+  m_Text: Start Matching
 --- !u!222 &1257528295
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12271,7 +12270,6 @@ MonoBehaviour:
   ManaCosts: 
   Payload: {fileID: 0}
   ShowValue: 0
-  Label: 
 --- !u!61 &1869998438
 BoxCollider2D:
   m_ObjectHideFlags: 0
