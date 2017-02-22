@@ -1147,6 +1147,80 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &197419012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 197419013}
+  - component: {fileID: 197419015}
+  - component: {fileID: 197419014}
+  m_Layer: 5
+  m_Name: TimerText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &197419013
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 197419012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1464890907}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -676}
+  m_SizeDelta: {x: 191, y: 82}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &197419014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 197419012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 50
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 10
+--- !u!222 &197419015
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 197419012}
 --- !u!1 &197715074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,7 +1417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.014604471, g: 0.5294118, b: 0.0751701, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3205,8 +3279,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DemoPlayer: {fileID: 0}
+  TurnButton: {fileID: 0}
+  ButtonText: {fileID: 0}
+  TimerText: {fileID: 0}
   Started: 0
+  Ended: 0
   TurnLength: 10
+  TimeLeft: 0
 --- !u!1 &503966173
 GameObject:
   m_ObjectHideFlags: 0
@@ -4241,11 +4320,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c303de72e36b684409407b8869c101aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardDamage: 0
   CurrentPlayer: {fileID: 0}
   OtherPlayer: {fileID: 0}
-  Payload: {fileID: 0}
+  CardDamage: 0
   ManaCosts: 
+  Payload: {fileID: 0}
+  ShowValue: 0
 --- !u!61 &660398452
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7256,12 +7336,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  StartingHealth: 100
-  MaxHealth: 100
   StartingShield: 0
   MaxShield: 25
-  HealthSlider: {fileID: 1350261575}
+  StartingHealth: 100
+  MaxHealth: 100
   ShieldSlider: {fileID: 2015274435}
+  HealthSlider: {fileID: 1350261575}
   WaterText: {fileID: 1232744735}
   FireText: {fileID: 1225837434}
   EarthText: {fileID: 1823732028}
@@ -7401,12 +7481,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  StartingHealth: 100
-  MaxHealth: 100
   StartingShield: 0
   MaxShield: 25
-  HealthSlider: {fileID: 2122440854}
+  StartingHealth: 100
+  MaxHealth: 100
   ShieldSlider: {fileID: 470674844}
+  HealthSlider: {fileID: 2122440854}
   WaterText: {fileID: 719812410}
   FireText: {fileID: 453568272}
   EarthText: {fileID: 869030810}
@@ -8175,7 +8255,7 @@ GameObject:
   - component: {fileID: 1257528295}
   - component: {fileID: 1257528294}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8231,7 +8311,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start Turn
+  m_Text: Start Matching
 --- !u!222 &1257528295
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9811,6 +9891,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 209019778}
+  - {fileID: 197419013}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12183,11 +12264,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c303de72e36b684409407b8869c101aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardDamage: 0
   CurrentPlayer: {fileID: 0}
   OtherPlayer: {fileID: 0}
-  Payload: {fileID: 0}
+  CardDamage: 0
   ManaCosts: 
+  Payload: {fileID: 0}
+  ShowValue: 0
 --- !u!61 &1869998438
 BoxCollider2D:
   m_ObjectHideFlags: 0

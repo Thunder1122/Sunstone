@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class Card : MonoBehaviour
@@ -19,6 +20,13 @@ public class Card : MonoBehaviour
     // actions without making multiple card classes
     public GameObject Payload;
 
+    // GUI Label vars, used to display card stats on screen.
+    private GUIStyle GuiStyle = new GUIStyle();
+    Rect LabelRect = new Rect(100, 100, 200, 80);
+    public bool ShowValue;
+    StringBuilder sb = new StringBuilder();
+    string[] ManaTypes = { "Air: ", "Earth: ", "Fire: ", "Water: " };
+
     /// <summary>
     /// Initialize card damage and costs
     /// </summary>
@@ -28,11 +36,14 @@ public class Card : MonoBehaviour
         CardDamage = Random.Range(10, 40);
 
         // Demo mana costs
-        ManaCosts = new int[6] { 1, 1, 1, 1, 0, 0 };
+        ManaCosts = new int[6] { Random.Range(0,3), Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3), 0, 0 };
 
         // Set players (this needs to be fixed later)
         CurrentPlayer = GameObject.Find("Player1").GetComponent<Player>();
         OtherPlayer = GameObject.Find("Player2").GetComponent<Player>();
+
+        // Set GUI Style params
+        GuiStyle.fontSize = 20;
     }
 
     /// <summary>
@@ -68,5 +79,41 @@ public class Card : MonoBehaviour
     internal void Update()
     {
         // Uh, nothing.
+    }
+
+    private void OnMouseEnter()
+    {
+        ShowValue = true;
+    }
+
+    private void OnMouseExit()
+    {
+        ShowValue = false;
+    }
+
+    public string LabelMaker()
+    {
+        sb.Remove(0, sb.Length);
+        sb.Append("Card Damage: ");
+        sb.Append(CardDamage);
+        sb.Append("\n\n");
+        for (int i = 0; i < 5; i++)
+        {
+            if(ManaCosts[i] != 0)
+            {
+                sb.Append(ManaTypes[i]);
+                sb.Append(ManaCosts[i]);
+                sb.Append('\n');
+            }
+        }
+        return sb.ToString();
+    }
+
+    private void OnGUI()
+    {
+        if (ShowValue)
+        {
+            GUI.Label(LabelRect, LabelMaker(), GuiStyle);
+        }
     }
 }
