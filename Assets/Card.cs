@@ -110,7 +110,6 @@ public class Card : MonoBehaviour
                 sb.Append('\n');
             }
         }
-        Debug.Log("String Generated");
         return sb.ToString();
     }
 
