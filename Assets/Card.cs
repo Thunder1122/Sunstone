@@ -81,7 +81,13 @@ public class Card : MonoBehaviour
         }
         else
         {
-            OtherPlayer.PlayerResources[5] -= CardDamage;
+            int PotentialDamage = CardDamage - OtherPlayer.PlayerResources[4];
+            if (PotentialDamage > 0) {
+                OtherPlayer.PlayerResources[4] = 0;
+                OtherPlayer.PlayerResources[5] -= PotentialDamage;
+            } else {
+                OtherPlayer.PlayerResources[4] -= CardDamage;
+            }
         }
 
         // Modify display of other player health
