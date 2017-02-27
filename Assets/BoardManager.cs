@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class BoardManager : MonoBehaviour {
+public class BoardManager : GameController {
 
     // Configurable board size
     public static readonly int ROWS = 10;
@@ -196,9 +196,6 @@ public class BoardManager : MonoBehaviour {
 
 
     internal void Start() {
-        // Instantiate a player for demo purposes
-        DemoPlayer = GameObject.Find("Player1").transform.GetComponent<Player>();
-
         // Reset selected values
         SelectedRow = -1;
         SelectedColumn = -1;
@@ -227,10 +224,15 @@ public class BoardManager : MonoBehaviour {
             collected[cell.GetComponent<BoardCell>().SpriteIndex] += 1;
         }
 
-        DemoPlayer.ChangeMana(collected);
+        CurrentPlayer.ChangeMana(collected);
 
         // Remove matched cells from board
         RemoveMatches(Matches);
+        
+        if (NeedNewBoard) {
+            GenerateBoard();
+            NeedNewBoard = false;
+        }
     }
 
 }

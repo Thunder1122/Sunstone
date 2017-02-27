@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 17564754}
   - component: {fileID: 17564755}
   m_Layer: 0
-  m_Name: P1MetalCostIcon
+  m_Name: MetalCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 25188192}
   - component: {fileID: 25188191}
   m_Layer: 0
-  m_Name: P1Hand
+  m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,6 +216,7 @@ Transform:
   m_LocalPosition: {x: -312.91498, y: -53.300934, z: 0}
   m_LocalScale: {x: 23.197592, y: 57.70775, z: 1}
   m_Children:
+  - {fileID: 686732873}
   - {fileID: 1656893442}
   - {fileID: 402655998}
   - {fileID: 363240151}
@@ -225,7 +226,6 @@ Transform:
   - {fileID: 700644769}
   - {fileID: 1814435242}
   - {fileID: 564079122}
-  - {fileID: 686732873}
   m_Father: {fileID: 1109909040}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -904,7 +904,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -918,6 +918,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_6
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -1127,7 +1137,7 @@ GameObject:
   - component: {fileID: 148658146}
   - component: {fileID: 148658145}
   m_Layer: 0
-  m_Name: P1FireCostText
+  m_Name: FireCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1844,7 +1854,7 @@ GameObject:
   - component: {fileID: 223042522}
   - component: {fileID: 223042523}
   m_Layer: 0
-  m_Name: P2Hand
+  m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1860,6 +1870,7 @@ Transform:
   m_LocalPosition: {x: -308, y: -56, z: 0}
   m_LocalScale: {x: 23.197592, y: 57.70775, z: 1}
   m_Children:
+  - {fileID: 470457105}
   - {fileID: 1774819310}
   - {fileID: 1483908376}
   - {fileID: 1757500343}
@@ -1869,7 +1880,6 @@ Transform:
   - {fileID: 1324694604}
   - {fileID: 360841158}
   - {fileID: 799058918}
-  - {fileID: 470457105}
   m_Father: {fileID: 1126656713}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2045,7 +2055,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -2059,6 +2069,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_5
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -2207,7 +2227,7 @@ GameObject:
   - component: {fileID: 300990753}
   - component: {fileID: 300990752}
   m_Layer: 0
-  m_Name: P2FireCostText
+  m_Name: FireCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2281,7 +2301,7 @@ GameObject:
   - component: {fileID: 314589931}
   - component: {fileID: 314589930}
   m_Layer: 0
-  m_Name: P2CardName
+  m_Name: CardName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2338,7 +2358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Filler Card Name
+  m_Text: 
 --- !u!222 &314589931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2382,7 +2402,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -2396,6 +2416,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_8
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -2570,7 +2600,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -2589,6 +2619,16 @@ Prefab:
       propertyPath: ShowValue
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -2993,7 +3033,7 @@ GameObject:
   - component: {fileID: 393403831}
   - component: {fileID: 393403830}
   m_Layer: 5
-  m_Name: P1FireLabel
+  m_Name: FireLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3093,7 +3133,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -3107,6 +3147,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_2
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -3315,7 +3365,7 @@ GameObject:
   - component: {fileID: 439709715}
   - component: {fileID: 439709716}
   m_Layer: 0
-  m_Name: P1FireCostIcon
+  m_Name: FireCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3458,7 +3508,7 @@ GameObject:
   - component: {fileID: 470674843}
   - component: {fileID: 470674844}
   m_Layer: 5
-  m_Name: P2ShieldSlider
+  m_Name: ShieldSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3638,7 +3688,7 @@ GameObject:
   - component: {fileID: 476721082}
   - component: {fileID: 476721083}
   m_Layer: 0
-  m_Name: P1EarthCostIcon
+  m_Name: EarthCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3729,7 +3779,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -3743,6 +3793,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_9
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -3756,7 +3816,7 @@ GameObject:
   - component: {fileID: 498483457}
   - component: {fileID: 498483458}
   m_Layer: 0
-  m_Name: P2AirCostIcon
+  m_Name: AirCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3909,14 +3969,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016ad0b2c25628e4692b05c4a5e894a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DemoPlayer: {fileID: 0}
+  P1: {fileID: 1109909041}
+  P2: {fileID: 1126656712}
   TurnButton: {fileID: 0}
   ButtonText: {fileID: 0}
   TimerText: {fileID: 0}
   Started: 0
-  Ended: 0
   TurnLength: 10
   TimeLeft: 0
+  MatchTurn: 0
+  FirstTurn: 0
+  BlockBoard: {fileID: 0}
 --- !u!1 &503966173
 GameObject:
   m_ObjectHideFlags: 0
@@ -4239,7 +4302,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -4253,6 +4316,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_9
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -4488,7 +4561,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -4502,6 +4575,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_2
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -4611,7 +4694,7 @@ GameObject:
   - component: {fileID: 622902851}
   - component: {fileID: 622902850}
   m_Layer: 0
-  m_Name: P2EarthCostText
+  m_Name: EarthCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4814,7 +4897,7 @@ GameObject:
   - component: {fileID: 635098739}
   - component: {fileID: 635098738}
   m_Layer: 5
-  m_Name: P1AirLabel
+  m_Name: AirLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4888,7 +4971,7 @@ GameObject:
   - component: {fileID: 643090674}
   - component: {fileID: 643090673}
   m_Layer: 0
-  m_Name: P2WaterCostText
+  m_Name: WaterCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5151,7 +5234,7 @@ GameObject:
   - component: {fileID: 663755336}
   - component: {fileID: 663755337}
   m_Layer: 0
-  m_Name: P2Water
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5267,7 +5350,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679656722
 GameObject:
@@ -5501,7 +5584,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -5515,6 +5598,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_7
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -5618,6 +5711,85 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &715155267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 715155268}
+  - component: {fileID: 715155269}
+  - component: {fileID: 715155270}
+  m_Layer: 5
+  m_Name: BlockHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &715155268
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715155267}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -312.90997, y: -53.300934, z: 0}
+  m_LocalScale: {x: 23.1975, y: 57.7077, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1109909040}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &715155269
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715155267}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1904011471
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2c9f7e615535b1a478fbb8157cb32486, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!61 &715155270
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715155267}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.05, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.2, y: 10.3}
 --- !u!1 &719812407
 GameObject:
   m_ObjectHideFlags: 0
@@ -5799,7 +5971,7 @@ GameObject:
   - component: {fileID: 746434214}
   - component: {fileID: 746434213}
   m_Layer: 0
-  m_Name: P1CardInfo
+  m_Name: CardInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5893,6 +6065,85 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &750313652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 750313653}
+  - component: {fileID: 750313655}
+  - component: {fileID: 750313654}
+  m_Layer: 5
+  m_Name: BlockHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &750313653
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 750313652}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -308, y: -53.300934, z: 0}
+  m_LocalScale: {x: 23.1975, y: 57.7077, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1126656713}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &750313654
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 750313652}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.03, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.08, y: 10.3}
+--- !u!212 &750313655
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 750313652}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1904011471
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2c9f7e615535b1a478fbb8157cb32486, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &755542320
 Prefab:
   m_ObjectHideFlags: 0
@@ -5930,7 +6181,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -5944,6 +6195,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_8
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -6886,7 +7147,7 @@ GameObject:
   - component: {fileID: 854403407}
   - component: {fileID: 854403406}
   m_Layer: 0
-  m_Name: P2LifeCostText
+  m_Name: LifeCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7102,7 +7363,7 @@ GameObject:
   - component: {fileID: 877569423}
   - component: {fileID: 877569422}
   m_Layer: 5
-  m_Name: P2HealthText
+  m_Name: HealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7202,7 +7463,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -7216,6 +7477,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_6
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -7656,7 +7927,7 @@ GameObject:
   - component: {fileID: 976436545}
   - component: {fileID: 976436546}
   m_Layer: 0
-  m_Name: P1Fire
+  m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7817,7 +8088,7 @@ GameObject:
   - component: {fileID: 1015308288}
   - component: {fileID: 1015308289}
   m_Layer: 0
-  m_Name: P2FireCostIcon
+  m_Name: FireCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7982,7 +8253,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -7996,6 +8267,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_7
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -8204,7 +8485,7 @@ GameObject:
   - component: {fileID: 1072269110}
   - component: {fileID: 1072269111}
   m_Layer: 0
-  m_Name: P1Air
+  m_Name: Air
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8297,7 +8578,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -8311,6 +8592,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_0
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -8399,7 +8690,7 @@ GameObject:
   - component: {fileID: 1104983810}
   - component: {fileID: 1104983809}
   m_Layer: 5
-  m_Name: P1EarthLabel
+  m_Name: EarthLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8654,8 +8945,9 @@ Transform:
   - {fileID: 25188192}
   - {fileID: 1753457644}
   - {fileID: 746434212}
+  - {fileID: 715155268}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1109909041
 MonoBehaviour:
@@ -8668,6 +8960,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4111497368e07c48ac1f0bac4cff1b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  P1: {fileID: 0}
+  P2: {fileID: 0}
+  TurnButton: {fileID: 0}
+  ButtonText: {fileID: 0}
+  TimerText: {fileID: 0}
+  Started: 0
+  TurnLength: 0
+  TimeLeft: 0
+  MatchTurn: 0
+  FirstTurn: 0
+  BlockBoard: {fileID: 0}
   CardArray:
   - {fileID: 0}
   - {fileID: 0}
@@ -8679,7 +8982,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  PlayerID: 0
   StartingShield: 0
   MaxShield: 25
   StartingHealth: 100
@@ -8692,6 +8994,15 @@ MonoBehaviour:
   AirText: {fileID: 2117942504}
   ShieldText: {fileID: 1526827677}
   HealthText: {fileID: 2043759753}
+  AirCostText: {fileID: 1327115969}
+  EarthCostText: {fileID: 1970877852}
+  FireCostText: {fileID: 148658145}
+  WaterCostText: {fileID: 1433936285}
+  MetalCostText: {fileID: 1707283303}
+  LifeCostText: {fileID: 1161817304}
+  CardName: {fileID: 1800932119}
+  CardDescription: {fileID: 1787773417}
+  CardBlocker: {fileID: 715155267}
 --- !u!1 &1118392853
 GameObject:
   m_ObjectHideFlags: 0
@@ -8814,6 +9125,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4111497368e07c48ac1f0bac4cff1b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  P1: {fileID: 0}
+  P2: {fileID: 0}
+  TurnButton: {fileID: 0}
+  ButtonText: {fileID: 0}
+  TimerText: {fileID: 0}
+  Started: 0
+  TurnLength: 0
+  TimeLeft: 0
+  MatchTurn: 0
+  FirstTurn: 0
+  BlockBoard: {fileID: 0}
   CardArray:
   - {fileID: 0}
   - {fileID: 0}
@@ -8825,7 +9147,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  PlayerID: 1
   StartingShield: 0
   MaxShield: 25
   StartingHealth: 100
@@ -8838,6 +9159,15 @@ MonoBehaviour:
   AirText: {fileID: 1197858158}
   ShieldText: {fileID: 2080153914}
   HealthText: {fileID: 877569422}
+  AirCostText: {fileID: 2119980259}
+  EarthCostText: {fileID: 622902850}
+  FireCostText: {fileID: 300990752}
+  WaterCostText: {fileID: 643090673}
+  MetalCostText: {fileID: 1315914091}
+  LifeCostText: {fileID: 854403406}
+  CardName: {fileID: 314589930}
+  CardDescription: {fileID: 1772109461}
+  CardBlocker: {fileID: 750313652}
 --- !u!4 &1126656713
 Transform:
   m_ObjectHideFlags: 0
@@ -8851,8 +9181,9 @@ Transform:
   - {fileID: 223042522}
   - {fileID: 1325408854}
   - {fileID: 1246950767}
+  - {fileID: 750313653}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1129261710
 GameObject:
@@ -9089,7 +9420,7 @@ GameObject:
   - component: {fileID: 1161817305}
   - component: {fileID: 1161817304}
   m_Layer: 0
-  m_Name: P1LifeCostText
+  m_Name: LifeCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9315,7 +9646,7 @@ Transform:
   - {fileID: 634295116}
   - {fileID: 1428183959}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1163539991
 MonoBehaviour:
@@ -9328,6 +9659,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044c1409925b4654eab996fb6da1c9a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  P1: {fileID: 0}
+  P2: {fileID: 0}
+  TurnButton: {fileID: 0}
+  ButtonText: {fileID: 0}
+  TimerText: {fileID: 0}
+  Started: 0
+  TurnLength: 0
+  TimeLeft: 0
+  MatchTurn: 0
+  FirstTurn: 0
+  BlockBoard: {fileID: 0}
   DemoPlayer: {fileID: 0}
   EmptyIndex: 6
   SelectedRow: -1
@@ -9431,7 +9773,7 @@ GameObject:
   - component: {fileID: 1208800051}
   - component: {fileID: 1208800052}
   m_Layer: 5
-  m_Name: P1Metal
+  m_Name: Metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9496,7 +9838,7 @@ GameObject:
   - component: {fileID: 1225837435}
   - component: {fileID: 1225837434}
   m_Layer: 5
-  m_Name: P1FireCount
+  m_Name: FireCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9569,7 +9911,7 @@ GameObject:
   - component: {fileID: 1230131034}
   - component: {fileID: 1230131035}
   m_Layer: 0
-  m_Name: P2MetalCostIcon
+  m_Name: MetalCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9634,7 +9976,7 @@ GameObject:
   - component: {fileID: 1232744736}
   - component: {fileID: 1232744735}
   m_Layer: 5
-  m_Name: P1WaterCount
+  m_Name: WaterCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9709,7 +10051,7 @@ GameObject:
   - component: {fileID: 1246950769}
   - component: {fileID: 1246950768}
   m_Layer: 0
-  m_Name: P2CardInfo
+  m_Name: CardInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9982,7 +10324,7 @@ GameObject:
   - component: {fileID: 1262838123}
   - component: {fileID: 1262838124}
   m_Layer: 0
-  m_Name: P2Air
+  m_Name: Air
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10239,7 +10581,7 @@ GameObject:
   - component: {fileID: 1315914092}
   - component: {fileID: 1315914091}
   m_Layer: 0
-  m_Name: P2MetalCostText
+  m_Name: MetalCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10312,7 +10654,7 @@ GameObject:
   - component: {fileID: 1318706524}
   - component: {fileID: 1318706525}
   m_Layer: 0
-  m_Name: P1WaterCostIcon
+  m_Name: WaterCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10478,7 +10820,7 @@ GameObject:
   - component: {fileID: 1325408856}
   - component: {fileID: 1325408855}
   m_Layer: 5
-  m_Name: P2StatsUICanvas
+  m_Name: StatsUICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10577,7 +10919,7 @@ GameObject:
   - component: {fileID: 1327115970}
   - component: {fileID: 1327115969}
   m_Layer: 0
-  m_Name: P1AirCostText
+  m_Name: AirCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10650,7 +10992,7 @@ GameObject:
   - component: {fileID: 1350261574}
   - component: {fileID: 1350261575}
   m_Layer: 5
-  m_Name: P1HealthSlider
+  m_Name: HealthSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11020,7 +11362,7 @@ GameObject:
   - component: {fileID: 1412998990}
   - component: {fileID: 1412998991}
   m_Layer: 0
-  m_Name: P2WaterCostIcon
+  m_Name: WaterCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11465,7 +11807,7 @@ GameObject:
   - component: {fileID: 1433936286}
   - component: {fileID: 1433936285}
   m_Layer: 0
-  m_Name: P1WaterCostText
+  m_Name: WaterCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11538,7 +11880,7 @@ GameObject:
   - component: {fileID: 1437987279}
   - component: {fileID: 1437987280}
   m_Layer: 0
-  m_Name: P2LifeCostIcon
+  m_Name: LifeCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11819,7 +12161,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -11833,6 +12175,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_0
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -12011,7 +12363,7 @@ GameObject:
   - component: {fileID: 1464890905}
   - component: {fileID: 1464890904}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ButtonCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12086,7 +12438,7 @@ RectTransform:
   - {fileID: 209019778}
   - {fileID: 197419013}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12325,7 +12677,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -12339,6 +12691,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_5
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -12421,7 +12783,7 @@ GameObject:
   - component: {fileID: 1526827678}
   - component: {fileID: 1526827677}
   m_Layer: 5
-  m_Name: P1ShieldText
+  m_Name: ShieldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12684,7 +13046,7 @@ GameObject:
   - component: {fileID: 1556637731}
   - component: {fileID: 1556637732}
   m_Layer: 5
-  m_Name: P1Life
+  m_Name: Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12938,7 +13300,7 @@ GameObject:
   - component: {fileID: 1591547466}
   - component: {fileID: 1591547467}
   m_Layer: 0
-  m_Name: P1Earth
+  m_Name: Earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13031,7 +13393,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -13045,6 +13407,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_4
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -13180,7 +13552,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -13194,6 +13566,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_1
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -13307,7 +13689,7 @@ GameObject:
   - component: {fileID: 1666865903}
   - component: {fileID: 1666865904}
   m_Layer: 0
-  m_Name: P1AirCostIcon
+  m_Name: AirCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13398,7 +13780,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -13412,6 +13794,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_4
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -13594,7 +13986,7 @@ GameObject:
   - component: {fileID: 1707283304}
   - component: {fileID: 1707283303}
   m_Layer: 0
-  m_Name: P1MetalCostText
+  m_Name: MetalCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13857,7 +14249,7 @@ GameObject:
   - component: {fileID: 1741457680}
   - component: {fileID: 1741457681}
   m_Layer: 0
-  m_Name: P1LifeCostIcon
+  m_Name: LifeCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13921,7 +14313,7 @@ GameObject:
   - component: {fileID: 1744299954}
   - component: {fileID: 1744299955}
   m_Layer: 0
-  m_Name: P2EarthCostIcon
+  m_Name: EarthCostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14156,7 +14548,7 @@ GameObject:
   - component: {fileID: 1753457642}
   - component: {fileID: 1753457641}
   m_Layer: 5
-  m_Name: P1StatsUICanvas
+  m_Name: StatsUICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14260,7 +14652,7 @@ GameObject:
   - component: {fileID: 1772109462}
   - component: {fileID: 1772109461}
   m_Layer: 0
-  m_Name: P2CardDescription
+  m_Name: CardDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14306,7 +14698,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -14314,10 +14706,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Filler Card text
+  m_Text: 
 --- !u!222 &1772109462
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14530,7 +14922,7 @@ GameObject:
   - component: {fileID: 1787773418}
   - component: {fileID: 1787773417}
   m_Layer: 0
-  m_Name: P1CardDescription
+  m_Name: CardDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14576,7 +14968,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -14584,10 +14976,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Filler Card text
+  m_Text: 
 --- !u!222 &1787773418
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14700,7 +15092,7 @@ GameObject:
   - component: {fileID: 1800932120}
   - component: {fileID: 1800932119}
   m_Layer: 0
-  m_Name: P1CardName
+  m_Name: CardName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14757,7 +15149,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Filler Card Name
+  m_Text: 
 --- !u!222 &1800932120
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14780,7 +15172,7 @@ GameObject:
   - component: {fileID: 1823732029}
   - component: {fileID: 1823732028}
   m_Layer: 5
-  m_Name: P1EarthCount
+  m_Name: EarthCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15206,7 +15598,7 @@ GameObject:
   - component: {fileID: 1881440351}
   - component: {fileID: 1881440352}
   m_Layer: 5
-  m_Name: P2Life
+  m_Name: Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15460,7 +15852,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -15474,6 +15866,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_1
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -15582,7 +15984,7 @@ GameObject:
   - component: {fileID: 1919939247}
   - component: {fileID: 1919939248}
   m_Layer: 0
-  m_Name: P2Earth
+  m_Name: Earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15934,7 +16336,7 @@ GameObject:
   - component: {fileID: 1970877853}
   - component: {fileID: 1970877852}
   m_Layer: 0
-  m_Name: P1EarthCostText
+  m_Name: EarthCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16282,6 +16684,85 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &2014016304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2014016307}
+  - component: {fileID: 2014016306}
+  - component: {fileID: 2014016305}
+  m_Layer: 5
+  m_Name: BlockBoard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &2014016305
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014016304}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.239999, y: 10.24}
+--- !u!212 &2014016306
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014016304}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1617455343
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2c9f7e615535b1a478fbb8157cb32486, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &2014016307
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014016304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 916, y: 496, z: 0}
+  m_LocalScale: {x: 56.300514, y: 55.898365, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2015274433
 GameObject:
   m_ObjectHideFlags: 0
@@ -16292,7 +16773,7 @@ GameObject:
   - component: {fileID: 2015274434}
   - component: {fileID: 2015274435}
   m_Layer: 5
-  m_Name: P1ShieldSlider
+  m_Name: ShieldSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16404,7 +16885,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4202489131221312, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
       propertyPath: m_LocalScale.x
@@ -16418,6 +16899,16 @@ Prefab:
       propertyPath: m_Name
       value: Card_3
       objectReference: {fileID: 0}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 1109909041}
+    - target: {fileID: 114204971922871394, guid: 0bf7329fa5de6974bb35d3eb96923f3f,
+        type: 2}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 1126656712}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -16527,7 +17018,7 @@ GameObject:
   - component: {fileID: 2043759754}
   - component: {fileID: 2043759753}
   m_Layer: 5
-  m_Name: P1HealthText
+  m_Name: HealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16695,7 +17186,7 @@ GameObject:
   - component: {fileID: 2065458565}
   - component: {fileID: 2065458566}
   m_Layer: 5
-  m_Name: P2Metal
+  m_Name: Metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16854,7 +17345,7 @@ GameObject:
   - component: {fileID: 2074516280}
   - component: {fileID: 2074516281}
   m_Layer: 0
-  m_Name: P2Fire
+  m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16921,7 +17412,7 @@ GameObject:
   - component: {fileID: 2080153913}
   - component: {fileID: 2080153914}
   m_Layer: 5
-  m_Name: P2ShieldText
+  m_Name: ShieldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17090,7 +17581,7 @@ GameObject:
   - component: {fileID: 2117942505}
   - component: {fileID: 2117942504}
   m_Layer: 5
-  m_Name: P1AirCount
+  m_Name: AirCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17164,7 +17655,7 @@ GameObject:
   - component: {fileID: 2118173745}
   - component: {fileID: 2118173744}
   m_Layer: 5
-  m_Name: P1WaterLabel
+  m_Name: WaterLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17306,7 +17797,7 @@ GameObject:
   - component: {fileID: 2119980260}
   - component: {fileID: 2119980259}
   m_Layer: 0
-  m_Name: P2AirCostText
+  m_Name: AirCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17379,7 +17870,7 @@ GameObject:
   - component: {fileID: 2122440853}
   - component: {fileID: 2122440854}
   m_Layer: 5
-  m_Name: P2HealthSlider
+  m_Name: HealthSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17559,7 +18050,7 @@ GameObject:
   - component: {fileID: 2141395238}
   - component: {fileID: 2141395239}
   m_Layer: 0
-  m_Name: P1Water
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
