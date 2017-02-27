@@ -67,10 +67,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c303de72e36b684409407b8869c101aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hand: {fileID: 0}
-  Damage: 0
-  CardNum: 0
-  Position: 0
+  CurrentPlayer: {fileID: 0}
+  OtherPlayer: {fileID: 0}
+  CardDamage: 0
+  ManaCosts: 
+  Payload: {fileID: 0}
+  LabelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  ShowValue: 0
 --- !u!212 &212030497792476838
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -102,7 +110,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c9f7e615535b1a478fbb8157cb32486, type: 3}
-  m_Color: {r: 1, g: 0.40738535, b: 0.16911763, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7663e2919e63130479b96d11e1376352, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

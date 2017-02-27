@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Card : MonoBehaviour
+public class Card : GameController
 {
-    // Track players
-    public Player CurrentPlayer;
-    public Player OtherPlayer;
-
     // Damage (positive number) which is a placeholder for misc effects
     public int CardDamage;
+    public string Name = "Demo Card";
+    public string Description = "Deals random damage between 10 and 40";
 
     // Mana costs to use this card
     public int[] ManaCosts;
@@ -20,37 +19,14 @@ public class Card : MonoBehaviour
     // actions without making multiple card classes
     public GameObject Payload;
 
-    // GUI Label vars, used to display card stats on screen.
-    private GUIStyle GuiStyle = new GUIStyle();
-    public Rect LabelRect;
-    public bool ShowValue;
-    StringBuilder sb = new StringBuilder();
-    string[] ManaTypes = { "Air: ", "Earth: ", "Fire: ", "Water: " };
-    string LabelString;
-
     /// <summary>
     /// Initialize card damage and costs
     /// </summary>
     internal void Start()
     {
-        // Demo card damage
-        CardDamage = Random.Range(10, 40);
-
         // Demo mana costs
+        // Air, Earth, Fire, Water, Metal, Life
         ManaCosts = new int[6] { Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3), 0, 0 };
-
-        // Set players
-        CurrentPlayer = transform.parent.parent.GetComponent<Player>();
-        OtherPlayer = GameObject.Find(transform.parent.parent.GetComponent<Player>().PlayerID == 0 ? "Player2" : "Player1").GetComponent<Player>();
-
-        // Set GUI Style params
-        GuiStyle.fontSize = 20;
-
-        // Generate the tooltip string for this card.
-        LabelString = LabelMaker();
-
-        // Calculate the offset for card stats display
-        LabelRect = new Rect(100 + (1400 * CurrentPlayer.PlayerID), 100, 40, 80);
     }
 
     /// <summary>
@@ -58,6 +34,9 @@ public class Card : MonoBehaviour
     /// </summary>
     internal void OnMouseDown()
     {
+        // Demo card damage
+        CardDamage = Random.Range(10, 40);
+
         // Check mana
         for (int i = 0; i < 6; i++)
         {
@@ -93,47 +72,42 @@ public class Card : MonoBehaviour
         // Modify display of other player health
         OtherPlayer.HealthSlider.value -= CardDamage;
         OtherPlayer.HealthText.text = OtherPlayer.HealthSlider.value.ToString();
-
     }
 
     internal void Update()
     {
-        // Uh, nothing.
+
     }
 
     private void OnMouseEnter()
     {
-        ShowValue = true;
+        DisplayCardInfo(transform.parent.GetComponentInParent<Player>());
     }
 
     private void OnMouseExit()
     {
-        ShowValue = false;
+        HideCardInfo(transform.parent.GetComponentInParent<Player>());
     }
 
-    public string LabelMaker()
-    {
-        sb.Remove(0, sb.Length);
-        sb.Append("Card Damage: ");
-        sb.Append(CardDamage);
-        sb.Append("\n\n");
-        for (int i = 0; i < 5; i++)
-        {
-            if (ManaCosts[i] != 0)
-            {
-                sb.Append(ManaTypes[i]);
-                sb.Append(ManaCosts[i]);
-                sb.Append('\n');
-            }
-        }
-        return sb.ToString();
+    private void DisplayCardInfo(Player Owner) {
+        Owner.AirCostText.text = ManaCosts[0].ToString();
+        Owner.EarthCostText.text = ManaCosts[1].ToString();
+        Owner.FireCostText.text = ManaCosts[2].ToString();
+        Owner.WaterCostText.text = ManaCosts[3].ToString();
+        Owner.MetalCostText.text = ManaCosts[4].ToString();
+        Owner.LifeCostText.text = ManaCosts[5].ToString();
+        Owner.CardName.text = Name;
+        Owner.CardDescription.text = Description;
     }
 
-    private void OnGUI()
-    {
-        if (ShowValue)
-        {
-            GUI.Label(LabelRect, LabelString, GuiStyle);
-        }
+    private void HideCardInfo(Player Owner) {
+        Owner.AirCostText.text = 0.ToString();
+        Owner.EarthCostText.text = 0.ToString();
+        Owner.FireCostText.text = 0.ToString();
+        Owner.WaterCostText.text = 0.ToString();
+        Owner.MetalCostText.text = 0.ToString();
+        Owner.LifeCostText.text = 0.ToString();
+        Owner.CardName.text = "";
+        Owner.CardDescription.text = "";
     }
 }

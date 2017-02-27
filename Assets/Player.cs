@@ -1,16 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class Player : GameController
 {
     // Internal card storage
     public GameObject[] CardArray = new GameObject[10];
-
-    // Internal Player Identifier (set from Unity inspector)
-    // "Player1" is 0, "Player2" is 1
-    public int PlayerID;
 
     // Parameterize shield and health
     public int StartingShield = 0;
@@ -27,7 +24,10 @@ public class Player : MonoBehaviour
 
     // UI text to appear in game
     public Text WaterText, FireText, EarthText, AirText, ShieldText, HealthText;
-
+    public Text AirCostText, EarthCostText, FireCostText, WaterCostText, MetalCostText, LifeCostText;
+    public Text CardName, CardDescription;
+    public GameObject CardBlocker;
+    
     /// <summary>
     /// Set all player resources to defaults
     /// </summary>
