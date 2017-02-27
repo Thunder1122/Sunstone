@@ -17,24 +17,31 @@ public class GameController : MonoBehaviour {
     public float TurnLength;
     public float TimeLeft;
 
-
     public static bool NeedNewBoard;
     public bool MatchTurn;
     public bool FirstTurn;
     public int TurnCount;
-    
+
+    public Text GameOverText;
+    public Text PlayerTurnText;
     public GameObject BlockBoard;
+
+    public BoardManager Board;
 
 
     // Use this for initialization
     void Start () {
+        Board = GameObject.Find("Board").GetComponent<BoardManager>();
+
         Started = false;
         TurnLength = 10.0f;
         TurnButton = GameObject.Find("TurnButton").GetComponent<Button>();
         ButtonText = GameObject.Find("ButtonText").GetComponent<Text>();
         TimerText = GameObject.Find("TimerText").GetComponent<Text>();
         TimerText.text = TurnLength.ToString();
-        
+
+        GameOverText = GameObject.Find("GameOverText").GetComponent<Text>();
+        PlayerTurnText = GameObject.Find("PlayerTurnText").GetComponent<Text>();
         BlockBoard = GameObject.Find("BlockBoard");
 
         NeedNewBoard = false;
@@ -47,9 +54,11 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        PlayerTurnText.text = "Player " + CurrentPlayer.name[6] + "'s Turn";
         if (MatchTurn) {
             MakeButtonStart();
             if (Started) {
+                TurnButton.gameObject.SetActive(false);
                 TimeLeft -= Time.deltaTime;
                 if (TimeLeft < 0) {
                     BlockBoard.SetActive(true); 
@@ -58,10 +67,23 @@ public class GameController : MonoBehaviour {
                     SwapPlayers();
                     if (FirstTurn) {
                         FirstTurn = false;
+                        if (Board.SelectedColumn != -1 || Board.SelectedRow != -1) {
+                            Board.BoardArray[Board.SelectedRow, Board.SelectedColumn].
+                                GetComponent<BoardCell>().Deselect(
+                                Board.BoardArray[Board.SelectedRow, Board.SelectedColumn].
+                                GetComponent<BoardCell>());
+                        }
                     } else {
+                        if (Board.SelectedColumn != -1 || Board.SelectedRow != -1) {
+                            Board.BoardArray[Board.SelectedRow, Board.SelectedColumn].
+                                GetComponent<BoardCell>().Deselect(
+                                Board.BoardArray[Board.SelectedRow, Board.SelectedColumn].
+                                GetComponent<BoardCell>());
+                        }
                         MatchTurn = false;
                         FirstTurn = true;
                     }
+                    TurnButton.gameObject.SetActive(true);
                     TurnCount++;
                 }
                 else {
@@ -71,6 +93,9 @@ public class GameController : MonoBehaviour {
         } else {
             MakeButtonEnd();
             CurrentPlayer.CardBlocker.SetActive(false);
+        }
+        if (CurrentPlayer.PlayerResources[5] == 0 || OtherPlayer.PlayerResources[5] == 0) {
+            GameOver();
         }
         
 	}
@@ -93,7 +118,7 @@ public class GameController : MonoBehaviour {
             }
             TurnCount++;
             if (TurnCount % 4 == 0) {
-                NeedNewBoard = true;
+                Board.GenerateBoard();
                 SwapPlayers();
             }
         }
@@ -113,5 +138,15 @@ public class GameController : MonoBehaviour {
         Player temp = CurrentPlayer;
         CurrentPlayer = OtherPlayer;
         OtherPlayer = temp;
+    }
+
+    public void GameOver() {
+        Player Winner;
+        if (P1.PlayerResources[5] == 0) {
+            Winner = P2;
+        } else {
+            Winner = P1;
+        }
+        GameOverText.text = "Player " + Winner.name[6] + " wins!";
     }
 }
