@@ -228,11 +228,6 @@ public class BoardManager : GameController {
 
         // Remove matched cells from board
         RemoveMatches(Matches);
-        
-        if (NeedNewBoard) {
-            GenerateBoard();
-            NeedNewBoard = false;
-        }
     }
 
 }

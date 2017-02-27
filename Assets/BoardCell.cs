@@ -20,10 +20,10 @@ public class BoardCell : MonoBehaviour {
     /// </summary>
     /// <param name="cell">cell to select</param>
     public void Select(BoardCell cell) {
-        BoardManager board = transform.parent.GetComponent<BoardManager>();
+        BoardManager Board = transform.parent.GetComponent<BoardManager>();
         cell.SpriteIndex += OFFSET;
-        board.SelectedRow = cell.ROWINDEX;
-        board.SelectedColumn = cell.COLUMNINDEX;
+        Board.SelectedRow = cell.ROWINDEX;
+        Board.SelectedColumn = cell.COLUMNINDEX;
     }
 
     /// <summary>
