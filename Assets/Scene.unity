@@ -928,6 +928,10 @@ Prefab:
       propertyPath: P2
       value: 
       objectReference: {fileID: 1126656712}
+    - target: {fileID: 1468564494504182, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
@@ -1362,7 +1366,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 20
 --- !u!222 &197419015
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5724,7 +5728,6 @@ GameObject:
   m_Component:
   - component: {fileID: 715155268}
   - component: {fileID: 715155269}
-  - component: {fileID: 715155270}
   m_Layer: 5
   m_Name: BlockHand
   m_TagString: Untagged
@@ -5780,20 +5783,6 @@ SpriteRenderer:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!61 &715155270
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 715155267}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.05, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 10.2, y: 10.3}
 --- !u!1 &719812407
 GameObject:
   m_ObjectHideFlags: 0
@@ -6078,7 +6067,6 @@ GameObject:
   m_Component:
   - component: {fileID: 750313653}
   - component: {fileID: 750313655}
-  - component: {fileID: 750313654}
   m_Layer: 5
   m_Name: BlockHand
   m_TagString: Untagged
@@ -6099,20 +6087,6 @@ Transform:
   m_Father: {fileID: 1126656713}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &750313654
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 750313652}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: -0.03, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 10.08, y: 10.3}
 --- !u!212 &750313655
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7491,6 +7465,10 @@ Prefab:
       propertyPath: P2
       value: 
       objectReference: {fileID: 1126656712}
+    - target: {fileID: 1468564494504182, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bf7329fa5de6974bb35d3eb96923f3f, type: 2}
   m_IsPrefabParent: 0
