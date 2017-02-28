@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Card : GameController
 {
+    public Player Parent;
+
     // Damage (positive number) which is a placeholder for misc effects
     public int CardDamage;
     public string Name = "Demo Card";
@@ -24,6 +26,8 @@ public class Card : GameController
     /// </summary>
     internal void Start()
     {
+        Parent = transform.parent.GetComponentInParent<Player>();
+
         // Demo mana costs
         // Air, Earth, Fire, Water, Metal, Life
         ManaCosts = new int[6] { Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3), 0, 0 };
@@ -81,12 +85,15 @@ public class Card : GameController
 
     private void OnMouseEnter()
     {
-        DisplayCardInfo(transform.parent.GetComponentInParent<Player>());
+        if (CurrentPlayer == Parent) {
+            DisplayCardInfo(Parent);
+        }
     }
 
-    private void OnMouseExit()
-    {
-        HideCardInfo(transform.parent.GetComponentInParent<Player>());
+    private void OnMouseExit() { 
+        if (CurrentPlayer == Parent) {
+            HideCardInfo(Parent);
+        }
     }
 
     private void DisplayCardInfo(Player Owner) {

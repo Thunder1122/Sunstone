@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour {
         Board = GameObject.Find("Board").GetComponent<BoardManager>();
 
         Started = false;
-        TurnLength = 10.0f;
+        TurnLength = 20.0f;
         TurnButton = GameObject.Find("TurnButton").GetComponent<Button>();
         ButtonText = GameObject.Find("ButtonText").GetComponent<Text>();
         TimerText = GameObject.Find("TimerText").GetComponent<Text>();
@@ -56,6 +56,7 @@ public class GameController : MonoBehaviour {
 	void Update () {
         PlayerTurnText.text = "Player " + CurrentPlayer.name[6] + "'s Turn";
         if (MatchTurn) {
+            CurrentPlayer.CardBlocker.SetActive(false);
             MakeButtonStart();
             if (Started) {
                 TurnButton.gameObject.SetActive(false);
@@ -64,6 +65,7 @@ public class GameController : MonoBehaviour {
                     BlockBoard.SetActive(true); 
                     TimerText.text = 0.ToString("F2");
                     Started = false;
+                    CurrentPlayer.CardBlocker.SetActive(true);
                     SwapPlayers();
                     if (FirstTurn) {
                         FirstTurn = false;
