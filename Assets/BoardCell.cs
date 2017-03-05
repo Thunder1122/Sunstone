@@ -20,7 +20,7 @@ public class BoardCell : MonoBehaviour {
     /// </summary>
     /// <param name="cell">cell to select</param>
     public void Select(BoardCell cell) {
-        BoardManager Board = transform.parent.GetComponent<BoardManager>();
+        BoardController Board = transform.parent.GetComponent<BoardController>();
         cell.SpriteIndex += OFFSET;
         Board.SelectedRow = cell.ROWINDEX;
         Board.SelectedColumn = cell.COLUMNINDEX;
@@ -31,7 +31,7 @@ public class BoardCell : MonoBehaviour {
     /// </summary>
     /// <param name="cell">cell to deselect</param>
     public void Deselect(BoardCell cell) {
-        BoardManager board = transform.parent.GetComponent<BoardManager>();
+        BoardController board = transform.parent.GetComponent<BoardController>();
         cell.SpriteIndex -= OFFSET;
         board.SelectedRow = -1;
         board.SelectedColumn = -1;
@@ -42,7 +42,7 @@ public class BoardCell : MonoBehaviour {
     /// </summary>
     public void OnMouseDown() {
         // Get coordinates of currently selected cell
-        BoardManager board = transform.parent.GetComponent<BoardManager>();
+        BoardController board = transform.parent.GetComponent<BoardController>();
         int row = board.SelectedRow;
         int column = board.SelectedColumn;
 
@@ -70,7 +70,7 @@ public class BoardCell : MonoBehaviour {
     /// Draw sprite based on SpriteIndex
     /// </summary>
     internal void DrawSprite() {
-        BoardManager board = transform.parent.GetComponent<BoardManager>();
+        BoardController board = transform.parent.GetComponent<BoardController>();
         GetComponent<SpriteRenderer>().sprite = board.sprites[SpriteIndex];
         return;
     }
