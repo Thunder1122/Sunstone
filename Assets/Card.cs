@@ -13,17 +13,10 @@ public class Card : GameController
     public int[] Costs = new int[7];
     public bool Used;
 
-    // wind, earth, fire, water, shield, health, empty, multi
-    public Sprite[] Sprites = new Sprite[8];
-
-    //Array used to map card ID to art
-    public int[] OkayWTF = new int[20];
-
     /// <summary>
     /// Initialize card damage and costs
     /// </summary>
     internal void Start() {
-        OkayWTF = new int[] { 7, 7, 7, 2, 2, 3, 2, 3, 0, 4, 3, 7, 1, 0, 0, 2, 0, 7, 0, 3};
         Parent = transform.parent.GetComponentInParent<Player>();
 
         do {
@@ -36,7 +29,6 @@ public class Card : GameController
 
         Costs = CardCosts[ID];
         Used = false;
-        gameObject.GetComponent<SpriteRenderer>().sprite = Sprites[OkayWTF[ID]];
     }
 
     /// <summary>
