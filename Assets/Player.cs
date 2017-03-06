@@ -85,6 +85,9 @@ public class Player : GameController
         } else {
             for (int i = 4; i < 6; i++) {
                 PlayerResources[i] += amounts[i];
+                if (i == 4) {
+                    PlayerResources[i] += 2*amounts[i];
+                }
             }
         }
         

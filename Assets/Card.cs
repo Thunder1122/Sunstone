@@ -18,17 +18,7 @@ public class Card : GameController
     /// </summary>
     internal void Start() {
         Parent = transform.parent.GetComponentInParent<Player>();
-
-        do {
-            ID = Random.Range(0, 20);
-        } while (UsedIDs.ContainsKey(ID));
-
-        UsedIDs.Add(ID, true);
-        Name = CardNames[ID];
-        Description = CardDescriptions[ID];
-
-        Costs = CardCosts[ID];
-        Used = false;
+        DistributeCards();
     }
 
     /// <summary>
@@ -127,8 +117,7 @@ public class Card : GameController
                 break;
 
             case 13:
-                CurrentPlayer.PlayerResources[5] = 100;
-                OtherPlayer.PlayerResources[5] = 100;
+                SubtractMana(new int[] { 0, 0, 0, 0, 0, 15 });
                 SubtractMana(Costs);
                 break;
 
@@ -138,7 +127,7 @@ public class Card : GameController
                 break;
 
             case 15:
-                CurrentPlayer.PlayerResources[1] += 4;
+                CurrentPlayer.PlayerResources[2] += 4;
                 SubtractMana(Costs);
                 break;
 
@@ -170,6 +159,7 @@ public class Card : GameController
                     CurrentPlayer.PlayerResources[1] += 6;
                     OtherPlayer.PlayerResources[1] -= 6;
                 }
+                SubtractMana(Costs);
                 break;
 
             default:
@@ -183,7 +173,10 @@ public class Card : GameController
 
     internal void Update()
     {
-
+        if (NeedNewCards < 20) {
+            DistributeCards();
+            NeedNewCards++;
+        }
     }
 
     private void OnMouseEnter()
@@ -248,6 +241,19 @@ public class Card : GameController
             }
         }
         return true;
+    }
+
+    private void DistributeCards() {
+        do {
+            ID = Random.Range(0, 20);
+        } while (UsedIDs.ContainsKey(ID));
+
+        UsedIDs.Add(ID, true);
+        Name = CardNames[ID];
+        Description = CardDescriptions[ID];
+
+        Costs = CardCosts[ID];
+        Used = false;
     }
 
     private void DisplayCardInfo(Player Owner) {

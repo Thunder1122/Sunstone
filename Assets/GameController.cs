@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour {
     public float TimeLeft;
 
     public static bool NeedNewBoard;
+    public static int NeedNewCards;
     public static bool MatchTurn;
     public static bool FirstTurn;
     public int TurnCount;
@@ -34,7 +35,7 @@ public class GameController : MonoBehaviour {
         Board = GameObject.Find("Board").GetComponent<BoardController>();
 
         Started = false;
-        TurnLength = 15.0f;
+        TurnLength = 1.0f;
         TurnButton = GameObject.Find("TurnButton").GetComponent<Button>();
         ButtonText = GameObject.Find("ButtonText").GetComponent<Text>();
         TimerText = GameObject.Find("TimerText").GetComponent<Text>();
@@ -45,6 +46,7 @@ public class GameController : MonoBehaviour {
         BlockBoard = GameObject.Find("BlockBoard");
 
         NeedNewBoard = false;
+        NeedNewCards = 20;
         TurnCount = 0;
         FirstTurn = true;
         MatchTurn = true;
@@ -113,6 +115,8 @@ public class GameController : MonoBehaviour {
                 card.GetComponent<Card>().Used = false;
                 card.GetComponent<Card>().GetComponent<SpriteRenderer>().color = Color.white;
             }
+            UsedIDs = new Dictionary<int, bool>();
+            NeedNewCards = 0;
             CurrentPlayer.CardBlocker.SetActive(true);
             SwapPlayers();
             if (FirstTurn) {
@@ -210,9 +214,9 @@ public class GameController : MonoBehaviour {
         "Effect ranges between healing 5 health and dealing 15 damage, ignoring shield.",
         "Deal 8 damage; give opponent 1 of each mana.",
         "Spend all earth mana; half recovered as health, half recovered as shield.",
-        "Restore both players to full health.",
-        "Give yourself 4 air mana.",  // 14 
-        "Give yourself 4 earth mana.",
+        "Restore 15 health.",
+        "Give yourself 4 wind mana.",  // 14 
+        "Give yourself 4 fire mana.",
         "Swap players' health bars.",
         "Give yourself 6 shield.",
         "Swap players' mana counts.",
@@ -234,12 +238,12 @@ public class GameController : MonoBehaviour {
         new int[] { 0, 0, 0, 6, 0, 0 },
         new int[] { 1, 1, 1, 1, 0, 0 },
         new int[] { 0, 0, 0, 0, 0, 0 },
-        new int[] { 14, 0, 0, 0, 0, 0 },
+        new int[] { 8, 0, 0, 8, 8, 0 },
         new int[] { 0, 0, 0, 4, 0, 0 },  // 14
-        new int[] { 0, 0, 4, 0, 0, 0 },
-        new int[] { 6, 0, 0, 0, 0, 0 },
+        new int[] { 0, 4, 0, 0, 0, 0 },
+        new int[] { 16, 0, 0, 0, 0, 0 },
         new int[] { 0, 2, 2, 0, 0, 0 },
-        new int[] { 8, 0, 0, 2, 0, 0 },
+        new int[] { 8, 6, 4, 2, 0, 0 },
         new int[] { 0, 0, 0, 4, 0, 0 }  // 19
     };
 
