@@ -85,6 +85,17 @@ MonoBehaviour:
   Name: 
   Description: 
   Costs: 
+  Used: 0
+  Sprites:
+  - {fileID: 21300000, guid: 3ad42b8eac02a2c489850cd7eb6ae33a, type: 3}
+  - {fileID: 21300000, guid: f51b72e799b59ce45a84ddadf2c904c6, type: 3}
+  - {fileID: 21300000, guid: 30098ab918c681240a384a041df8313f, type: 3}
+  - {fileID: 21300000, guid: ae6cca5f9032b6c48ac4fd7d5d5c521f, type: 3}
+  - {fileID: 21300000, guid: 48fc2f01eb36c684f84b5850ce87d29c, type: 3}
+  - {fileID: 21300000, guid: 61cffce322b1a424d99b118f1f6eb046, type: 3}
+  - {fileID: 21300000, guid: 7663e2919e63130479b96d11e1376352, type: 3}
+  - {fileID: 21300000, guid: cdcc83d303b231c4ba3b0f8da66af035, type: 3}
+  OkayWTF: 
 --- !u!212 &212030497792476838
 SpriteRenderer:
   m_ObjectHideFlags: 1
